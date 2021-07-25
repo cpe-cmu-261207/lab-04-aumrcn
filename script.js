@@ -12,12 +12,23 @@ const clicked = () => {
         alert("Task cannnot be empty");
     }else{
         newElement(event)
+        addToLocalStorage(myInput);
     }
 }
 
 inputBox.addEventListener('keyup' , ( event ) =>{ 
     if(event.keyCode === 13) clicked()
 })
+
+function addToLocalStorage(myInput){
+    localStorage.setItem("myInput" , JSON.stringify(myInput));
+}
+
+function retrieveLocalStorage(){
+
+}
+
+var localdata = JSON.parse(localStorage.getItem("myInput"));
 
 function newElement(event) {
     const tagDiv = document.createElement('div');
@@ -41,6 +52,9 @@ function newElement(event) {
             tempLi = event.target.parentNode.childNodes[0].innerText;
             console.log(event.target.parentNode.childNodes[0].innerText)
             addDonelist(tempLi);
+            tagLi.remove();
+        })
+        btn4.addEventListener('click' , (event) =>{
             tagLi.remove();
         })
     })

@@ -26,6 +26,7 @@
     background: rgb(188, 255, 246);
     margin-bottom: 5px;
     border-radius: 10px;
+    justify-content: space-between;
     display: flex;
 }
 
@@ -81,15 +82,17 @@
 .poom3{
     background: rgb(31, 189, 78);
     padding: 4px 20px;
-    justify-content: flex-end;
-    margin-left: 40px;
+    justify-content: space-between;
+    display: flex;
+    margin-left: auto;
 }
 
 .poom4{
     padding: 4px 20px;
     background: rgb(216, 28, 28);
+    justify-content: space-between;
+    display: flex;
     justify-content: flex-end;
-    margin-left: 10px;
 }
 
 /* .list{
