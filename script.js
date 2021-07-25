@@ -5,14 +5,19 @@ const inputBox = document.querySelector(".inputBox input");
 const doneList = document.querySelector(".doneList")
 const poom4 = document.querySelector(".poom4");
 var tempLi
+var arrtodolist = [];
+var arrdonelist = [];
 
 
 const clicked = () => {
     if(myInput.value == ''){
         alert("Task cannnot be empty");
     }else{
+        arrtodolist.push(myInput.value);
         newElement(event)
-        addToLocalStorage(myInput);
+        console.log(arrtodolist);
+        console.log(arrdonelist);
+        // addToLocalStorage(myInput);
     }
 }
 
@@ -20,13 +25,14 @@ inputBox.addEventListener('keyup' , ( event ) =>{
     if(event.keyCode === 13) clicked()
 })
 
-function addToLocalStorage(myInput){
-    localStorage.setItem("myInput" , JSON.stringify(myInput));
-}
+// function addToLocalStorage(myInput){
+//     for(var i = 0 ; i < )
+//     localStorage.setItem("myInput" , JSON.stringify(myInput));
+// }
 
-function retrieveLocalStorage(){
+// function retrieveLocalStorage(){
 
-}
+// }
 
 var localdata = JSON.parse(localStorage.getItem("myInput"));
 
@@ -51,10 +57,15 @@ function newElement(event) {
         btn3.addEventListener('click' , (event) =>{
             tempLi = event.target.parentNode.childNodes[0].innerText;
             console.log(event.target.parentNode.childNodes[0].innerText)
+            arrdonelist.push(tempLi);
             addDonelist(tempLi);
+            arrtodolist.splice(findIndexOf(arrtodolist,tempLi) , 1)
             tagLi.remove();
         })
         btn4.addEventListener('click' , (event) =>{
+            tempLi = event.target.parentNode.childNodes[0].innerText;
+            arrtodolist.splice(findIndexOf(arrtodolist,tempLi) , 1)
+            console.log(arrtodolist);
             tagLi.remove();
         })
     })
@@ -70,4 +81,11 @@ function addDonelist(text) {
     tagLi.classList.add("finished");
     tagLi.innerText = text;
     doneList.insertBefore(tagLi,doneList.childNodes[0])
+    console.log(arrtodolist);
+    console.log(arrdonelist);
+}
+
+function findIndexOf (arr , data){
+    console.log(arr.indexOf(data));
+    return arr.indexOf(data);
 }
