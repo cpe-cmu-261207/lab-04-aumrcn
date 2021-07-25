@@ -61,6 +61,7 @@ function loadToDoElement(event) {
         tagLi.addEventListener('mouseenter', (event) => {
             const btn3 = document.createElement("button");
             const btn4 = document.createElement("button");
+            tagDiv.appendChild(event.target);
             btn3.classList.add("poom3");
             btn4.classList.add("poom4");
             btn3.innerText = "Done";
@@ -104,6 +105,7 @@ function newElement(event) {
     tagLi.addEventListener('mouseenter', (event) => {
         const btn3 = document.createElement("button");
         const btn4 = document.createElement("button");
+        const btnDiv = document.createElement('div');
         btn3.classList.add("poom3");
         btn4.classList.add("poom4");
         btn3.innerText = "Done";

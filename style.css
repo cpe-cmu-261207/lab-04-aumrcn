@@ -28,6 +28,8 @@
     border-radius: 10px;
     justify-content: space-between;
     display: flex;
+    border-width: 2px;
+    border-color: black;
 }
 
 .inputBox{
@@ -64,6 +66,7 @@
     max-width: 800px;
     border-radius: 25px;
     padding: 25px;
+    border: solid black;
 }
 
 .headerbobo{
@@ -91,16 +94,16 @@
     border-width: 2px;
 }
 
-/* .poom3{
+.poom3{
     background: rgb(31, 189, 78);
     padding: 4px 20px;
     margin-right: 10px;
-} */
+} 
 
-/* .poom4{
+.poom4{
     padding: 4px 20px;
     background: rgb(216, 28, 28);
-} */
+}
 
 /* .list{
     background: rgb(188, 255, 246);
@@ -115,4 +118,11 @@
 
 .finished{
     text-decoration: line-through;
+    border-radius: 10px;
+    border-color: black;
+    border-width: 2px;
+    background: rgb(240, 158, 81);
+    margin-bottom: 10px;
+    text-align: end;
+    padding-right: 20px;
 }
