@@ -52,69 +52,31 @@ function loadToDoElement(event) {
     for (var i = 0; i < arrtodolist.length; ++i) {
         const tagDiv = document.createElement('div');
         const tagLi = document.createElement('li');
+        const btndiv = document.createElement('div');
         tagDiv.classList.add("pushokpai");
-        tagDiv.innerText = arrtodolist[i];
+        tagDiv.innerText = arrtodolist[i]
         tagLi.classList.add("active");
         tagLi.appendChild(tagDiv);
+        tagLi.appendChild(btndiv);
         myInput.value = '';
-        toDolist.insertBefore(tagLi, toDolist.childNodes[0]);
-        tagLi.addEventListener('mouseenter', (event) => {
-            const btn3 = document.createElement("button");
-            const btn4 = document.createElement("button");
-            tagDiv.appendChild(event.target);
-            btn3.classList.add("poom3");
-            btn4.classList.add("poom4");
-            btn3.innerText = "Done";
-            btn4.innerText = "Delete";
-            event.target.appendChild(btn3);
-            event.target.appendChild(btn4);
-            btn3.addEventListener('click', (event) => {
-                tempLi = event.target.parentNode.childNodes[0].innerText;
-                console.log(event.target.parentNode.childNodes[0].innerText)
-                arrdonelist.push(tempLi);
-                addDonelist(tempLi);
-                arrtodolist.splice(findIndexOf(arrtodolist, tempLi), 1)
-                tagLi.remove();
-                saveToStorage();
-            })
-            btn4.addEventListener('click', (event) => {
-                tempLi = event.target.parentNode.childNodes[0].innerText;
-                arrtodolist.splice(findIndexOf(arrtodolist, tempLi), 1)
-                // console.log(arrtodolist);
-                tagLi.remove();
-                saveToStorage();
-            })
-        })
-        tagLi.addEventListener('mouseleave', (event) => {
-            event.target.removeChild(event.target.childNodes[1]);
-            event.target.removeChild(event.target.childNodes[1]);
-        })
-    }
-
-}
-
-function newElement(event) {
-    const tagDiv = document.createElement('div');
-    const tagLi = document.createElement('li');
-    tagDiv.classList.add("pushokpai");
-    tagDiv.innerText = myInput.value;
-    tagLi.classList.add("active");
-    tagLi.appendChild(tagDiv);
-    myInput.value = '';
-    toDolist.insertBefore(tagLi, toDolist.childNodes[0]);
-    tagLi.addEventListener('mouseenter', (event) => {
+        toDolist.insertBefore(tagLi, toDolist.childNodes[0])
         const btn3 = document.createElement("button");
         const btn4 = document.createElement("button");
-        const btnDiv = document.createElement('div');
+        // const btndiv = document.createElement('div');
         btn3.classList.add("poom3");
         btn4.classList.add("poom4");
         btn3.innerText = "Done";
         btn4.innerText = "Delete";
-        event.target.appendChild(btn3);
-        event.target.appendChild(btn4);
+        btn3.style.visibility = "hidden";
+        btn4.style.visibility = "hidden";
+        // event.target.appendChild(btn3);
+        // event.target.appendChild(btn4);
+        btndiv.appendChild(btn3);
+        btndiv.appendChild(btn4);
+        tagLi.appendChild(btndiv);
+        btndiv.classList.add("buttonbox");
         btn3.addEventListener('click', (event) => {
-            tempLi = event.target.parentNode.childNodes[0].innerText;
-            console.log(event.target.parentNode.childNodes[0].innerText)
+            tempLi = event.target.parentNode.parentNode.childNodes[0].innerText;
             arrdonelist.push(tempLi);
             addDonelist(tempLi);
             arrtodolist.splice(findIndexOf(arrtodolist, tempLi), 1)
@@ -122,17 +84,73 @@ function newElement(event) {
             saveToStorage();
         })
         btn4.addEventListener('click', (event) => {
-            tempLi = event.target.parentNode.childNodes[0].innerText;
+            tempLi = event.target.parentNode.parentNode.childNodes[0].innerText;
             arrtodolist.splice(findIndexOf(arrtodolist, tempLi), 1)
-            // console.log(arrtodolist);
             tagLi.remove();
             saveToStorage();
         })
-    })
-    tagLi.addEventListener('mouseleave', (event) => {
-        event.target.removeChild(event.target.childNodes[1]);
-        event.target.removeChild(event.target.childNodes[1]);
-    })
+        tagLi.addEventListener('mouseenter', (event) => {
+            btn3.style.visibility = "visible";
+            btn4.style.visibility = "visible";
+
+        })
+        tagLi.addEventListener('mouseleave', (event) => {
+            btn3.style.visibility = "hidden";
+            btn4.style.visibility = "hidden";
+        })
+    }
+
+}
+
+function newElement(event) {
+    const tagDiv = document.createElement('div');
+        const tagLi = document.createElement('li');
+        const btndiv = document.createElement('div');
+        tagDiv.classList.add("pushokpai");
+        tagDiv.innerText = myInput.value;
+        tagLi.classList.add("active");
+        tagLi.appendChild(tagDiv);
+        tagLi.appendChild(btndiv);
+        myInput.value = '';
+        toDolist.insertBefore(tagLi, toDolist.childNodes[0])
+        const btn3 = document.createElement("button");
+        const btn4 = document.createElement("button");
+        // const btndiv = document.createElement('div');
+        btn3.classList.add("poom3");
+        btn4.classList.add("poom4");
+        btn3.innerText = "Done";
+        btn4.innerText = "Delete";
+        btn3.style.visibility = "hidden";
+        btn4.style.visibility = "hidden";
+        // event.target.appendChild(btn3);
+        // event.target.appendChild(btn4);
+        btndiv.appendChild(btn3);
+        btndiv.appendChild(btn4);
+        tagLi.appendChild(btndiv);
+        btndiv.classList.add("buttonbox");
+        btn3.addEventListener('click', (event) => {
+            tempLi = event.target.parentNode.parentNode.childNodes[0].innerText;
+            arrdonelist.push(tempLi);
+            addDonelist(tempLi);
+            arrtodolist.splice(findIndexOf(arrtodolist, tempLi), 1)
+            tagLi.remove();
+            saveToStorage();
+        })
+        btn4.addEventListener('click', (event) => {
+            tempLi = event.target.parentNode.parentNode.childNodes[0].innerText;
+            arrtodolist.splice(findIndexOf(arrtodolist, tempLi), 1)
+            tagLi.remove();
+            saveToStorage();
+        })
+        tagLi.addEventListener('mouseenter', (event) => {
+            btn3.style.visibility = "visible";
+            btn4.style.visibility = "visible";
+
+        })
+        tagLi.addEventListener('mouseleave', (event) => {
+            btn3.style.visibility = "hidden";
+            btn4.style.visibility = "hidden";
+        })
 
 }
 

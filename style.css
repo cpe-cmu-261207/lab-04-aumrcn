@@ -1,7 +1,7 @@
 .roboto_font {
     font-family: 'Roboto', sans-serif;
 }
-
+/* 
 .text_point a{
     transition: color .4s ease;
 }
@@ -20,7 +20,7 @@
   
 .hover-box:hover{
     transform: scale(1.01);
-}
+} */
 
 .active{
     background: rgb(188, 255, 246);
@@ -30,6 +30,12 @@
     display: flex;
     border-width: 2px;
     border-color: black;
+    padding-bottom: 10px;
+    padding-top: 10px;
+}
+
+.active:hover{
+    transform: scale(1.1);
 }
 
 .inputBox{
@@ -41,9 +47,13 @@
     height: 40px;
     border: solid black;
     border-width: 2px;
-    padding-top: 4px;
-    padding-bottom: 4px;
-    
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 25px;
+    border-radius: 3px;
+}
+.inputBox:hover{
+    transform: scale(1.1);
 }
 
 .toDolist{
@@ -78,12 +88,21 @@
     border-radius: 3px;
 }
 
+.poom1:hover{
+    transform: scale(1.1);
+}
+
+.poom2:hover{
+    transform: scale(1.1);
+}
+
 .poom1{
     padding: 4px 4px;
     background: rgb(66, 248, 121);
     border-radius: 3px;
     border-color: black;
     border-width: 2px;
+    padding: 5px;
 }
 
 .poom2{
@@ -92,18 +111,42 @@
     border-radius: 3px;
     border-color: black;
     border-width: 2px;
+    padding: 5px;
 }
 
 .poom3{
-    background: rgb(31, 189, 78);
-    padding: 4px 20px;
+    background: rgb(66, 248, 121);;
     margin-right: 10px;
+    border-radius: 3px;
+    border-color: black;
+    border-width: 2px;
+    padding: 5px;
 } 
 
-.poom4{
-    padding: 4px 20px;
-    background: rgb(216, 28, 28);
+.poom3:hover{
+    transform: scale(1.1);
 }
+
+.poom4:hover{
+    transform: scale(1.1);
+}
+
+.poom4{
+    background: rgb(248, 76, 76);
+    border-radius: 3px;
+    border-color: black;
+    border-width: 2px;
+    margin-right: 10px;
+    color: white;
+    padding: 5px;
+}
+/* li: .poom3{
+
+}
+
+li:hover .poom3{
+    
+} */
 
 /* .list{
     background: rgb(188, 255, 246);
@@ -114,6 +157,7 @@
 .pushokpai{
     margin-left: 20px;
     display: flex;
+    margin-top: 6px;
 }
 
 .finished{
@@ -125,4 +169,8 @@
     margin-bottom: 10px;
     text-align: end;
     padding-right: 20px;
+}
+
+.buttondiv{
+    margin-right: 20px;
 }
