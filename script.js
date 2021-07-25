@@ -25,6 +25,11 @@ const clicked = () => {
     }
 }
 
+function reset() {
+    localStorage.clear();
+    location.reload();
+}
+
 inputBox.addEventListener('keyup', (event) => {
     if (event.keyCode === 13) clicked()
 })
