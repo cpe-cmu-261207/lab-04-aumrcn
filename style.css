@@ -24,7 +24,7 @@
 
 .active{
     background: rgb(188, 255, 246);
-    margin-bottom: 5px;
+    margin-bottom: 10px;
     border-radius: 10px;
     justify-content: space-between;
     display: flex;
@@ -37,6 +37,11 @@
     text-align: center;
     width: 70%;
     height: 40px;
+    border: solid black;
+    border-width: 2px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    
 }
 
 .toDolist{
@@ -44,6 +49,7 @@
     margin-left: 50px;
     margin-right: 50px;
     text-align: left;
+    margin-bottom: 10px;
 }
 
 .doneList{
@@ -71,29 +77,30 @@
 
 .poom1{
     padding: 4px 4px;
-    background: rgb(31, 189, 78);
+    background: rgb(66, 248, 121);
+    border-radius: 3px;
+    border-color: black;
+    border-width: 2px;
 }
 
 .poom2{
     padding: 4px 4px;
-    background: rgb(216, 28, 28);
+    background: rgb(248, 76, 76);
+    border-radius: 3px;
+    border-color: black;
+    border-width: 2px;
 }
 
-.poom3{
+/* .poom3{
     background: rgb(31, 189, 78);
     padding: 4px 20px;
-    justify-content: space-between;
-    display: flex;
-    margin-left: auto;
-}
+    margin-right: 10px;
+} */
 
-.poom4{
+/* .poom4{
     padding: 4px 20px;
     background: rgb(216, 28, 28);
-    justify-content: space-between;
-    display: flex;
-    justify-content: flex-end;
-}
+} */
 
 /* .list{
     background: rgb(188, 255, 246);
@@ -103,6 +110,7 @@
 
 .pushokpai{
     margin-left: 20px;
+    display: flex;
 }
 
 .finished{
