@@ -7,14 +7,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<script src='script.js' defer></script>
 	<title>Lab 04</title>
-	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet"> -->
+	<link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+	<link href="style.css" rel="stylesheet">
 </head>
 
-<body>
-	<h1>Minimal Todo List</h1>
-	<input  type='text'>
-	<button>+</button>
-	<p>bobo1</p>
+<body class="bg-gradient-to-r from-green-300 via-blue-300 to-purple-300">
+	<div class="groupMain bg-gradient-to-l from-pink-300 via-purple-300 to-indigo-300">
+		<div class="my-6 "> 
+			<div class="mx-auto roboto_font text-4xl headerbobo">HTML DOM Todo List</div>
+		</div>
+		<div class = "inputBox ">
+			<input type='text' id="myInput" placeholder="Add to your list" class="text-2xl">
+			<button onclick="clicked()" class="text-2xl poom1">Add</button>
+			<button onclick="reset()" class="text-2xl poom2">Reset</button>
+		</div>
+		<div class = "list">
+			<ul class="toDolist text-2xl">
+			</ul>
+			<ul class="doneList text-2xl">
+			</ul>
+		</div>
+		
+	</div>
 </body>
 
 </html>

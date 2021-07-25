@@ -1,0 +1,107 @@
+.roboto_font {
+    font-family: 'Roboto', sans-serif;
+}
+
+.text_point a{
+    transition: color .4s ease;
+}
+
+.text_point a:hover{
+    color: white;
+}
+
+.text_point span{
+    font-size: x-large;
+}
+
+.hover-box{
+    transition: 0.5s ;
+}
+  
+.hover-box:hover{
+    transform: scale(1.01);
+}
+
+.active{
+    background: rgb(188, 255, 246);
+    margin-bottom: 5px;
+    border-radius: 10px;
+    display: flex;
+}
+
+.inputBox{
+    text-align: center;
+}
+.inputBox input{
+    text-align: center;
+    width: 70%;
+    height: 40px;
+}
+
+.toDolist{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: left;
+}
+
+.doneList{
+    margin-top: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: left;
+}
+
+.groupMain{
+    margin: 24px auto;
+    max-width: 800px;
+    border-radius: 25px;
+    padding: 25px;
+}
+
+.headerbobo{
+    text-align: center;
+}
+
+.poom{
+    margin: 5px 5px;
+    border-radius: 3px;
+}
+
+.poom1{
+    padding: 4px 4px;
+    background: rgb(31, 189, 78);
+}
+
+.poom2{
+    padding: 4px 4px;
+    background: rgb(216, 28, 28);
+}
+
+.poom3{
+    background: rgb(31, 189, 78);
+    padding: 4px 20px;
+    justify-content: flex-end;
+    margin-left: 40px;
+}
+
+.poom4{
+    padding: 4px 20px;
+    background: rgb(216, 28, 28);
+    justify-content: flex-end;
+    margin-left: 10px;
+}
+
+/* .list{
+    background: rgb(188, 255, 246);
+    margin-left: 50px;
+    margin-right: 50px;
+} */
+
+.pushokpai{
+    margin-left: 20px;
+}
+
+.finished{
+    text-decoration: line-through;
+}
